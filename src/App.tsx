@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BarChart from "./components/BarChart"; // 确保路径正确
+import ScatterPlot from "./components/ScatterPlot"; // 添加 ScatterPlot 组件
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center", padding: "20px" }}>
+      <h1>Interactive Vega-Lite Charts</h1>
+      
+      <h2>Bar Chart</h2>
+      <BarChart />
+
+      <h2>Scatter Plot</h2>
+      <ScatterPlot />
+
     </div>
   );
-}
+};
 
 export default App;
